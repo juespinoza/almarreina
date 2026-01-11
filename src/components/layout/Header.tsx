@@ -10,12 +10,10 @@ import Image from "next/image";
 
 export default function Header({
   locale,
-  cafe,
   nav,
   siteName = "Coffee Template",
 }: {
   locale: string;
-  cafe: string;
   nav: any;
   siteName?: string;
 }) {

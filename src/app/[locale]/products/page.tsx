@@ -12,7 +12,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale; cafe: string }>;
 }): Promise<Metadata> {
   const { locale, cafe } = await params;
-  const data = await getCafeContent(cafe, locale);
+  const data = await getCafeContent(locale);
 
   const pageTitle =
     data?.productsPage?.title ?? data?.nav?.products ?? "Products";
@@ -31,7 +31,7 @@ export async function generateMetadata({
   };
 
   return buildMetadata(
-    { locale: locale, cafe: cafe, slug: "products" },
+    { locale: locale, slug: "products" },
     dataWithSeo
   );
 }
@@ -42,7 +42,7 @@ export default async function ProductsPage({
   params: Promise<{ locale: Locale; cafe: string }>;
 }) {
   const { locale, cafe } = await params;
-  const data = await getCafeContent(cafe, locale);
+  const data = await getCafeContent(locale);
 
   return (
     <div className="bg-bg">

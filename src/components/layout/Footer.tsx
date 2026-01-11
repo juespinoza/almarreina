@@ -3,14 +3,12 @@ import Link from "next/link";
 
 export default function Footer({
   locale,
-  cafe,
   data,
 }: {
   locale: string;
-  cafe: string;
   data: any;
 }) {
-  const base = `/${locale}/${cafe}`;
+  const base = `/${locale}`;
   const nav = data?.nav ?? {};
   const site = data?.site ?? {};
   const social = site?.social ?? {};
@@ -131,7 +129,7 @@ export default function Footer({
             <i>
               Desarrollado por{" "}
               <Link
-                href="https://github.com/juespinoza/almarreina"
+                href="https://github.com/juespinoza"
                 target="_blank"
                 className="underline"
               >

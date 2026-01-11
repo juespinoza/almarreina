@@ -25,17 +25,17 @@ function ensureArray<T>(v: unknown, fallback: T[] = []) {
 
 /**
  * buildMetadata
- * - params: { locale, cafe, slug? } donde slug podría ser "menu" | "products" | ...
+ * - params: { locale, slug? } donde slug podría ser "menu" | "products" | ...
  * - data: contenido JSON devuelto por getCafeContent(cafe, locale)
  */
 export function buildMetadata(
-  params: { locale: string; cafe: string; slug?: string },
+  params: { locale: string; slug?: string },
   data: any
 ): Metadata {
   const baseUrl = getSiteBaseUrl();
   const metadataBase = new URL(baseUrl);
 
-  const siteName: string = data?.site?.name ?? params.cafe;
+  const siteName: string = data?.site?.name ?? "Coffee Template";
 
   const defaultDescription: string =
     data?.seo?.description ?? data?.site?.description ?? "";
@@ -49,26 +49,15 @@ export function buildMetadata(
 
   // Slug actual (para canonical / alternates)
   const slug = params.slug?.replace(/^\//, "") ?? "";
-  const path = slug
-    ? `/${params.locale}/${params.cafe}/${slug}`
-    : `/${params.locale}/${params.cafe}`;
+  const path = slug ? `/${params.locale}/${slug}` : `/${params.locale}`;
 
   const canonical = cleanUrl(baseUrl, path);
 
   // Alternates por idioma (si querés, los podés hardcodear o leer locales desde lib/i18n)
   const languages: Record<string, string> = {
-    es: cleanUrl(
-      baseUrl,
-      slug ? `/es/${params.cafe}/${slug}` : `/es/${params.cafe}`
-    ),
-    en: cleanUrl(
-      baseUrl,
-      slug ? `/en/${params.cafe}/${slug}` : `/en/${params.cafe}`
-    ),
-    pt: cleanUrl(
-      baseUrl,
-      slug ? `/pt/${params.cafe}/${slug}` : `/pt/${params.cafe}`
-    ),
+    es: cleanUrl(baseUrl, slug ? `/es/${slug}` : `/es`),
+    en: cleanUrl(baseUrl, slug ? `/en/${slug}` : `/en`),
+    pt: cleanUrl(baseUrl, slug ? `/pt/${slug}` : `/pt`),
   };
 
   const images: string[] = ogImage

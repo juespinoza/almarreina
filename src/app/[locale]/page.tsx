@@ -14,7 +14,7 @@ export default async function Home({
 }) {
   const { locale } = await params;
   const cafe = process.env.NEXT_PUBLIC_CAFE_NAME || "Coffee Shop";
-  const data = await getCafeContent(cafe, locale);
+  const data = await getCafeContent(locale);
 
   return (
     <div className="bg-bg">

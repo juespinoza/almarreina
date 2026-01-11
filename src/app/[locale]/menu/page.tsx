@@ -12,7 +12,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale; cafe: string }>;
 }): Promise<Metadata> {
   const { locale, cafe } = await params;
-  const data = await getCafeContent(cafe, locale);
+  const data = await getCafeContent(locale);
 
   // Clonamos data para ajustar title solo para esta page
   const pageTitle = data?.menuPage?.title ?? data?.nav?.menu ?? "Menu";
@@ -22,14 +22,15 @@ export async function generateMetadata({
     seo: {
       ...(data?.seo ?? {}),
       title: buildPageTitle(pageTitle, data?.site?.name ?? cafe),
-      description: data?.seo.description ?? data?.contactPage?.subtitle ?? data?.site?.description ?? "",
+      description:
+        data?.seo.description ??
+        data?.contactPage?.subtitle ??
+        data?.site?.description ??
+        "",
     },
   };
 
-  return buildMetadata(
-    { locale: locale, cafe: cafe, slug: "menu" },
-    dataWithSeo
-  );
+  return buildMetadata({ locale: locale, slug: "menu" }, dataWithSeo);
 }
 
 export default async function MenuPage({
@@ -38,7 +39,7 @@ export default async function MenuPage({
   params: Promise<{ locale: Locale; cafe: string }>;
 }) {
   const { locale, cafe } = await params;
-  const data = await getCafeContent(cafe, locale);
+  const data = await getCafeContent(locale);
 
   return (
     <div className="bg-bg">

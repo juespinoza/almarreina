@@ -6,17 +6,7 @@ import { buildMetadata } from "@/lib/seo";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import GoogleAnalytics from "@/components/layout/GoogleAnalytics";
-import type { Locale } from "@/lib/i18n";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: Locale; cafe: string }>;
-}): Promise<Metadata> {
-  const { locale, cafe } = await params;
-  const data = await getCafeContent(cafe, locale);
-  return buildMetadata({ locale, cafe }, data);
-}
+import { locales, type Locale } from "@/lib/i18n";
 
 function cssVarsFromTheme(theme: any) {
   const to = (arr: number[]) => arr.join(" ");
@@ -46,34 +36,51 @@ function cssVarsFromTheme(theme: any) {
   `;
 }
 
-export default async function CafeLayout({
+function isLocale(x: string): x is Locale {
+  return (locales as readonly string[]).includes(x);
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : "es";
+
+  const data = await getCafeContent(locale);
+  return buildMetadata({ locale }, data);
+}
+
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  const cafe = process.env.NEXT_PUBLIC_CAFE_NAME || "Coffee Shop";
-  const data = await getCafeContent(cafe, locale);
-  const theme = await getCafeTheme(cafe);
+  const { locale: rawLocale } = await params;
+  const locale = isLocale(rawLocale) ? rawLocale : "es";
+
+  const data = await getCafeContent(locale);
+  const theme = await getCafeTheme();
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
         <style dangerouslySetInnerHTML={{ __html: cssVarsFromTheme(theme) }} />
       </head>
+
       <body>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <GoogleAnalytics />
-          <Header
-            locale={locale}
-            cafe={cafe}
-            nav={data.nav}
-            siteName={data.site.name}
-          />
+          <Header locale={locale} nav={data.nav} siteName={data.site.name} />
           <main className="min-h-[60vh]">{children}</main>
-          <Footer locale={locale} cafe={cafe} data={data} />
+          <Footer locale={locale} data={data} />
         </ThemeProvider>
       </body>
     </html>
