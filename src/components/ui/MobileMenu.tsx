@@ -136,10 +136,10 @@ export default function MobileMenu({
               </ul>
 
               {/* hint */}
-              <div className="mt-8 text-xs text-muted">
+              {/* <div className="mt-8 text-xs text-muted">
                 Tip: presioná <span className="font-semibold">ESC</span> para
                 cerrar.
-              </div>
+              </div> */}
             </nav>
           </aside>
         </div>
