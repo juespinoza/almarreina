@@ -23,7 +23,7 @@ export async function generateMetadata({
     seo: {
       ...(data?.seo ?? {}),
       title: buildPageTitle(pageTitle, data?.site?.name ?? cafe),
-      description: data?.contactPage?.subtitle ?? data?.site?.description ?? "",
+      description: data?.seo.description ?? data?.contactPage?.subtitle ?? data?.site?.description ?? "",
     },
   };
 
@@ -96,7 +96,7 @@ export default async function ContactPage({
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pb-12">
-        <MapEmbed embedUrl={data.site.mapEmbedUrl} />
+        <MapEmbed embedUrl={data.contactPage.reviews.mapEmbedUrl} />
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pb-16">

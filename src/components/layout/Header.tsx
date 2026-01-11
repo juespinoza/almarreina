@@ -6,6 +6,7 @@ import ThemeToggle from "../ui/ThemeToggle";
 import LocaleSwitch from "../ui/LocaleSwitch";
 import MobileMenu from "../ui/MobileMenu";
 import { normalizePathname } from "@/lib/utils";
+import Image from "next/image";
 
 export default function Header({
   locale,
@@ -38,10 +39,12 @@ export default function Header({
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur">
-      <div className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
+      <div className="mx-auto max-w-6xl px-4 h-20 flex items-center justify-between">
         <Link href={base} className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-lg bg-primary/10 border border-border" />
-          <span className="font-semibold">{siteName}</span>
+          <div className="h-20 w-20 bg-primary/10">
+            <Image alt={siteName} src="/logo.jpg" width={80} height={80} />
+          </div>
+          {/* <span className="font-semibold">{siteName}</span> */}
         </Link>
 
         <nav className="hidden md:flex items-center gap-2">
@@ -52,7 +55,7 @@ export default function Header({
                 key={l.href}
                 href={l.href}
                 className={[
-                  "px-4 py-2 rounded-full text-sm transition",
+                  "px-4 py-2 rounded-sm text-sm transition",
                   active ? "bg-primary2/25" : "hover:bg-primary2/20",
                 ].join(" ")}
               >

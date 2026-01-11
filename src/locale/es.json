@@ -13,7 +13,7 @@
       "facebook": "https://www.facebook.com/almarreina",
       "whatsapp": "https://wa.me/595981149936"
     },
-    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.94155063245!2d-57.565884324509845!3d-25.272551577662448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da6051550917f%3A0x3c945ff3356ff799!2sAlmarreina!5e0!3m2!1ses-419!2spy!4v1768091458337!5m2!1ses-419!2spy",
+    "googleMapsUrl": "https://maps.app.goo.gl/23spx1ESMwKmNvp4A",
     "cloudinaryFolder": "v1768090628"
   },
   "nav": {
@@ -31,28 +31,32 @@
       "cta": { "label": "Explora Nuestro Menú", "href": "menu" },
       "image": "coffee_e3jzj5"
     },
-    "features": [
-      {
-        "icon": "coffee",
-        "title": "Café Especial",
-        "text": "Granos cuidadosamente seleccionados, tostados a la perfección."
-      },
-      {
-        "icon": "croissant",
-        "title": "Pastelería Artesanal",
-        "text": "Horneado fresco diariamente con ingredientes premium."
-      },
-      {
-        "icon": "heart",
-        "title": "Atmósfera Acogedora",
-        "text": "Un espacio cálido y acogedor para todos."
-      }
-    ],
+    "features": {
+      "title": "Por qué elegir Almarreina",
+      "list": [
+        {
+          "icon": "coffee",
+          "title": "Café Especial",
+          "text": "Granos cuidadosamente seleccionados, tostados a la perfección."
+        },
+        {
+          "icon": "croissant",
+          "title": "Pastelería Artesanal",
+          "text": "Horneado fresco diariamente con ingredientes premium."
+        },
+        {
+          "icon": "heart",
+          "title": "Atmósfera Acogedora",
+          "text": "Un espacio cálido y acogedor para todos."
+        }
+      ]
+    },
     "gallery": [
       "breakfast_jixtpj",
       "pot-mussels_na02nf",
       "kitchen-bar_frqc56",
-      "dessert_opqpui"
+      "dessert_opqpui",
+      "coffee_e3jzj5"
     ],
     "visit": {
       "title": "Visítanos Hoy",
@@ -151,11 +155,12 @@
           "text": "Muy lindo lugar, ideal para trabajar. Volvería sin dudar."
         }
       ],
-      "googleMapsUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.94155063245!2d-57.565884324509845!3d-25.272551577662448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da6051550917f%3A0x3c945ff3356ff799!2sAlmarreina!5e0!3m2!1ses-419!2spy!4v1768091458337!5m2!1ses-419!2spy"
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.94155063245!2d-57.565884324509845!3d-25.272551577662448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da6051550917f%3A0x3c945ff3356ff799!2sAlmarreina!5e0!3m2!1ses-419!2spy!4v1768091458337!5m2!1ses-419!2spy"
     }
   },
   "seo": {
     "title": "Café de especialidad en Asunción | Almarreina",
+    "description": "Café de especialidad y pastelería artesanal en el corazón de Asunción. Visítanos hoy.",
     "keywords": ["café de especialidad", "pastelería artesanal", "Asunción"],
     "ogImage": "og.jpg"
   }

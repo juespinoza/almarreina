@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer({
@@ -21,7 +22,9 @@ export default function Footer({
           {/* Left: logo + tagline + social */}
           <div>
             <div className="flex items-center gap-3">
-              <div className="h-12 w-12 rounded-lg bg-white/10 border border-white/15" />
+              <div className="h-20 w-20 bg-primary/10">
+                <Image alt={site.name} src="/logo.jpg" width={80} height={80} />
+              </div>
               <div className="font-semibold">{site.name ?? "Coffee"}</div>
             </div>
 
@@ -123,7 +126,10 @@ export default function Footer({
         {/* Bottom */}
         <div className="mt-10 border-t border-white/15 pt-6 text-center text-xs text-white/60">
           © {new Date().getFullYear()} {site.name ?? "Coffee Shop"}. Todos los
-          derechos reservados. <i>Desarrollado por Magnitud Vega</i>
+          derechos reservados.
+          <div>
+            <i>Desarrollado por Julia Espinoza</i>
+          </div>
         </div>
       </div>
     </footer>

@@ -38,7 +38,7 @@ export function buildMetadata(
   const siteName: string = data?.site?.name ?? params.cafe;
 
   const defaultDescription: string =
-    data?.site?.description ?? data?.seo?.description ?? "";
+    data?.seo?.description ?? data?.site?.description ?? "";
 
   // SEO general (por café)
   const seoTitle: string = data?.seo?.title ?? `${siteName}`;

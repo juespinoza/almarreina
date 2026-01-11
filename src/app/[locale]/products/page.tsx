@@ -23,7 +23,10 @@ export async function generateMetadata({
       ...(data?.seo ?? {}),
       title: buildPageTitle(pageTitle, data?.site?.name ?? cafe),
       description:
-        data?.productsPage?.subtitle ?? data?.site?.description ?? "",
+        data?.seo.description ??
+        data?.contactPage?.subtitle ??
+        data?.site?.description ??
+        "",
     },
   };
 

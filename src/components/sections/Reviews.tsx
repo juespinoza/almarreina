@@ -85,10 +85,10 @@ export default function Reviews({
         </div>
       )}
 
-      {reviews?.googleMapsUrl && (
+      {reviews?.mapEmbedUrl && (
         <div className="mt-6 text-center">
           <a
-            href={reviews.googleMapsUrl}
+            href={reviews.mapEmbedUrl}
             target="_blank"
             className="inline-flex items-center justify-center rounded-lg border border-border bg-bg px-4 py-2 text-sm hover:bg-primary2/20 hover:-translate-y-px transition shadow-soft"
           >

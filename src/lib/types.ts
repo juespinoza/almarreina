@@ -19,7 +19,7 @@ export type ReviewsData = {
   rating?: number; // 0..5
   count?: number;
   items?: ReviewItem[];
-  googleMapsUrl?: string;
+  mapEmbedUrl?: string;
 };
 
 export type Feature = {

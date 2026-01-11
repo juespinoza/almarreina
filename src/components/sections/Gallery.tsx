@@ -13,12 +13,12 @@ export default function Gallery({
   const list = (images ?? []).slice(0, 10);
 
   return (
-    <section className="grid gap-5 md:grid-cols-2">
+    <section className="grid gap-2 md:grid-cols-2">
       {/* Dos columnas grandes como en tu diseño */}
       {list.slice(0, 2).map((img, idx) => (
         <div
           key={img + idx}
-          className="relative aspect-16/10 rounded-xl2 overflow-hidden border border-border shadow-soft bg-bg"
+          className="relative aspect-16/10 rounded-sm overflow-hidden shadow-soft bg-bg"
         >
           <Image
             src={cloudinaryUrl(folder, img)}
@@ -32,11 +32,11 @@ export default function Gallery({
 
       {/* Si hay más, mostramos una grilla secundaria abajo */}
       {list.length > 2 && (
-        <div className="md:col-span-2 grid gap-4 sm:grid-cols-3">
+        <div className="md:col-span-2 grid gap-2 sm:grid-cols-3">
           {list.slice(2).map((img, idx) => (
             <div
               key={img + idx}
-              className="relative aspect-4/3 rounded-xl2 overflow-hidden border border-border bg-bg"
+              className="relative aspect-4/3 rounded-sm overflow-hidden bg-bg"
             >
               <Image
                 src={cloudinaryUrl(folder, img)}

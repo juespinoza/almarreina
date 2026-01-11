@@ -21,10 +21,10 @@ export default async function Home({
       <Hero cafe={cafe} site={data.site} hero={data.home.hero} />
       <section className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="text-center text-3xl md:text-4xl">
-          Por Qué Elegir {data.site.name}
+          {data.home.features.title}
         </h2>
         <div className="mt-8">
-          <Features items={data.home.features} />
+          <Features items={data.home.features.list} />
         </div>
       </section>
 
@@ -40,7 +40,7 @@ export default async function Home({
         <VisitBanner
           cafe={cafe}
           visit={data.home.visit}
-          mapEmbedUrl={data.site.mapEmbedUrl}
+          googleMapsUrl={data.site.googleMapsUrl}
         />
       </section>
     </div>
