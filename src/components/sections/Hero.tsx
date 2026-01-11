@@ -31,6 +31,7 @@ export default function Hero({
             priority
             sizes="(max-width: 768px) 100vw, 1200px"
             className="object-cover"
+            loading="eager"
           />
 
           {/* Overlay suave */}
