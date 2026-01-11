@@ -20,8 +20,8 @@ export default function Hero({
   const folder = site.cloudinaryFolder;
 
   return (
-    <section className="mx-auto max-w-6xl px-4 pt-8">
-      <div className="relative overflow-hidden rounded-xl2 border border-border shadow-soft">
+    <section className="mx-auto pt-8">
+      <div className="relative overflow-hidden shadow-soft">
         {/* Imagen */}
         <div className="relative h-80 sm:h-105 md:h-130 bg-bg">
           <Image

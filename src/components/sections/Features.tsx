@@ -34,8 +34,7 @@ export default function Features({ items }: { items: Feature[] }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.28 }}
-          className="rounded-xl2 border border-border bg-surface shadow-soft p-6 text-center
-                     hover:translate-y-0.5 transition"
+          className="rounded-xl2 border border-border bg-surface shadow-soft p-6 text-center hover:translate-y-0.5 transition"
         >
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary2/15 border border-border">
             <Icon name={f.icon} />

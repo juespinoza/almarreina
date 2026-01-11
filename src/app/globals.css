@@ -37,3 +37,17 @@ h2,
 h3 {
   font-family: var(--font-display);
 }
+
+@theme {
+  --color-bg: rgb(var(--bg));
+  --color-surface: rgb(var(--surface));
+  --color-text: rgb(var(--text));
+  --color-muted: rgb(var(--muted));
+  --color-primary: rgb(var(--primary));
+  --color-primary2: rgb(var(--primary2));
+  --color-border: rgb(var(--border));
+
+  --radius-xl2: 1.5rem;
+
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+}

@@ -1,19 +1,19 @@
 {
   "site": {
-    "name": "Almarreina Coffee Shop",
-    "tagline": "Donde cada taza cuenta una historia",
+    "name": "Almarreina Cafetería",
+    "tagline": "La colmena del café ☕🐝",
     "description": "Café de especialidad y pastelería artesanal en el corazón de Asunción.",
     "address": "Asunción, Paraguay",
     "hours": {
-      "weekdays": "Lunes - Viernes: 7:00 AM - 8:00 PM",
-      "weekends": "Sábado - Domingo: 8:00 AM - 9:00 PM"
+      "weekdays": "Martes - Viernes: 1:00 PM - 9:00 PM",
+      "weekends": "Sábado - Domingo: 9:00 AM - 9:00 PM"
     },
     "social": {
-      "instagram": "https://instagram.com/...",
-      "facebook": "https://facebook.com/...",
-      "whatsapp": "https://wa.me/595..."
+      "instagram": "https://www.instagram.com/almarreina",
+      "facebook": "https://www.facebook.com/almarreina",
+      "whatsapp": "https://wa.me/595981149936"
     },
-    "mapEmbedUrl": "https://www.google.com/maps/embed?...",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.94155063245!2d-57.565884324509845!3d-25.272551577662448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da6051550917f%3A0x3c945ff3356ff799!2sAlmarreina!5e0!3m2!1ses-419!2spy!4v1768091458337!5m2!1ses-419!2spy",
     "cloudinaryFolder": "v1768090628"
   },
   "nav": {
@@ -25,11 +25,11 @@
   },
   "home": {
     "hero": {
-      "title": "Almarreina Coffee Shop",
-      "subtitle": "Donde cada taza cuenta una historia",
+      "title": "Almarreina Cafetería",
+      "subtitle": "La colmena del café ☕🐝",
       "text": "Experimenta el arte del café especial y la pastelería artesanal en el corazón de Asunción.",
       "cta": { "label": "Explora Nuestro Menú", "href": "menu" },
-      "image": "hero_ksm3rc"
+      "image": "coffee_e3jzj5"
     },
     "features": [
       {
@@ -48,7 +48,12 @@
         "text": "Un espacio cálido y acogedor para todos."
       }
     ],
-    "gallery": ["g1.jpg", "g2.jpg", "g3.jpg", "g4.jpg"],
+    "gallery": [
+      "breakfast_jixtpj",
+      "pot-mussels_na02nf",
+      "kitchen-bar_frqc56",
+      "dessert_opqpui"
+    ],
     "visit": {
       "title": "Visítanos Hoy",
       "text": "Experimenta el mejor café y pastelería de Asunción",
@@ -86,7 +91,7 @@
         "price": 12000,
         "short": "Perfección hojaldrada y mantecosa.",
         "long": "Croissant artesanal horneado a diario...",
-        "images": ["p1.jpg", "p1b.jpg", "p1c.jpg"]
+        "images": ["dessert_opqpui", "coffee_e3jzj5", "cld-sample-4_nqjnl3"]
       }
     ]
   },
@@ -94,8 +99,11 @@
     "title": "Nuestra Historia",
     "subtitle": "Pasión por el café y la comunidad",
     "story": {
-      "image": "about.jpg",
-      "text": "Almarreina nació de una pasión por el café excepcional..."
+      "image": "fish-vegetables_aocgpl",
+      "paragraphs": [
+        "Almarreina nació de una pasión por el café excepcional...",
+        "Nuestra misión es ofrecer una experiencia única en cada taza."
+      ]
     },
     "teamTitle": "Conoce Nuestro Equipo",
     "teamSubtitle": "Las personas detrás de tu café favorito",
@@ -106,7 +114,7 @@
         "bio": "Experta en café con 10 años de experiencia"
       }
     ],
-    "bannerImage": "about-banner.jpg"
+    "bannerImage": "kitchen-bar_frqc56"
   },
   "contactPage": {
     "title": "Contáctanos",
@@ -143,7 +151,7 @@
           "text": "Muy lindo lugar, ideal para trabajar. Volvería sin dudar."
         }
       ],
-      "googleMapsUrl": "https://www.google.com/maps?..."
+      "googleMapsUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.94155063245!2d-57.565884324509845!3d-25.272551577662448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da6051550917f%3A0x3c945ff3356ff799!2sAlmarreina!5e0!3m2!1ses-419!2spy!4v1768091458337!5m2!1ses-419!2spy"
     }
   },
   "seo": {

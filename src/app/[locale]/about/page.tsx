@@ -12,9 +12,10 @@ export const revalidate = 3600; // 1 hora
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale; cafe: string }>;
+  params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-  const { locale, cafe } = await params;
+  const { locale } = await params;
+  const cafe = process.env.NEXT_PUBLIC_CAFE_NAME || "Coffee Shop";
   const data = await getCafeContent(cafe, locale);
 
   const pageTitle = data?.aboutPage?.title ?? data?.nav?.about ?? "About";
@@ -77,6 +78,7 @@ export default async function AboutPage({
                 fill
                 sizes="(max-width: 768px) 100vw, 1200px"
                 className="object-cover"
+                loading="eager"
               />
             </div>
           </div>
