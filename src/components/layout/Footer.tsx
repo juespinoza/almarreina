@@ -128,7 +128,16 @@ export default function Footer({
           © {new Date().getFullYear()} {site.name ?? "Coffee Shop"}. Todos los
           derechos reservados.
           <div>
-            <i>Desarrollado por Julia Espinoza</i>
+            <i>
+              Desarrollado por{" "}
+              <Link
+                href="https://github.com/juespinoza/almarreina"
+                target="_blank"
+                className="underline"
+              >
+                Julia Espinoza
+              </Link>
+            </i>
           </div>
         </div>
       </div>
