@@ -1,0 +1,162 @@
+{
+  "site": {
+    "name": "Almarreina Cafetería",
+    "tagline": "La colmena del café ☕🐝",
+    "description": "Café de especialidad y pastelería artesanal en el corazón de Asunción.",
+    "address": "Asunción, Paraguay",
+    "hours": {
+      "weekdays": "Martes - Viernes: 1:00 PM - 9:00 PM",
+      "weekends": "Sábado - Domingo: 9:00 AM - 9:00 PM"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/almarreina",
+      "facebook": "https://www.facebook.com/almarreina",
+      "whatsapp": "https://wa.me/595981149936"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.94155063245!2d-57.565884324509845!3d-25.272551577662448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da6051550917f%3A0x3c945ff3356ff799!2sAlmarreina!5e0!3m2!1ses-419!2spy!4v1768091458337!5m2!1ses-419!2spy",
+    "cloudinaryFolder": "v1768090628"
+  },
+  "nav": {
+    "home": "Inicio",
+    "menu": "Menú",
+    "products": "Productos",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero": {
+      "title": "Almarreina Cafetería",
+      "subtitle": "La colmena del café ☕🐝",
+      "text": "Experimenta el arte del café especial y la pastelería artesanal en el corazón de Asunción.",
+      "cta": { "label": "Explora Nuestro Menú", "href": "menu" },
+      "image": "coffee_e3jzj5"
+    },
+    "features": [
+      {
+        "icon": "coffee",
+        "title": "Café Especial",
+        "text": "Granos cuidadosamente seleccionados, tostados a la perfección."
+      },
+      {
+        "icon": "croissant",
+        "title": "Pastelería Artesanal",
+        "text": "Horneado fresco diariamente con ingredientes premium."
+      },
+      {
+        "icon": "heart",
+        "title": "Atmósfera Acogedora",
+        "text": "Un espacio cálido y acogedor para todos."
+      }
+    ],
+    "gallery": [
+      "breakfast_jixtpj",
+      "pot-mussels_na02nf",
+      "kitchen-bar_frqc56",
+      "dessert_opqpui"
+    ],
+    "visit": {
+      "title": "Visítanos Hoy",
+      "text": "Experimenta el mejor café y pastelería de Asunción",
+      "button": "Cómo llegar"
+    }
+  },
+  "menuPage": {
+    "title": "Nuestro Menú",
+    "subtitle": "Descubre nuestras selecciones cuidadosamente elaboradas",
+    "sections": [
+      {
+        "title": "Café",
+        "items": [
+          {
+            "name": "Espresso",
+            "desc": "Espresso italiano clásico",
+            "price": 15000
+          },
+          {
+            "name": "Cappuccino",
+            "desc": "Espresso con espuma de leche",
+            "price": 18000
+          }
+        ]
+      }
+    ]
+  },
+  "productsPage": {
+    "title": "Nuestros Productos",
+    "subtitle": "Pastelería artesanal y productos horneados",
+    "products": [
+      {
+        "id": "croissant-mantequilla",
+        "name": "Croissant de Mantequilla",
+        "price": 12000,
+        "short": "Perfección hojaldrada y mantecosa.",
+        "long": "Croissant artesanal horneado a diario...",
+        "images": ["dessert_opqpui", "coffee_e3jzj5", "cld-sample-4_nqjnl3"]
+      }
+    ]
+  },
+  "aboutPage": {
+    "title": "Nuestra Historia",
+    "subtitle": "Pasión por el café y la comunidad",
+    "story": {
+      "image": "fish-vegetables_aocgpl",
+      "paragraphs": [
+        "Almarreina nació de una pasión por el café excepcional...",
+        "Nuestra misión es ofrecer una experiencia única en cada taza."
+      ]
+    },
+    "teamTitle": "Conoce Nuestro Equipo",
+    "teamSubtitle": "Las personas detrás de tu café favorito",
+    "team": [
+      {
+        "name": "María González",
+        "role": "Barista Principal",
+        "bio": "Experta en café con 10 años de experiencia"
+      }
+    ],
+    "bannerImage": "kitchen-bar_frqc56"
+  },
+  "contactPage": {
+    "title": "Contáctanos",
+    "subtitle": "Nos encantaría saber de ti",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "message": "Mensaje",
+      "sendWhatsapp": "Enviar por WhatsApp",
+      "sendEmail": "Enviar por Email"
+    },
+    "reviews": {
+      "title": "Reseñas de clientes",
+      "sourceLabel": "Reseñas de Google",
+      "rating": 4.8,
+      "count": 327,
+      "items": [
+        {
+          "author": "Carolina V.",
+          "rating": 5,
+          "date": "Hace 2 semanas",
+          "text": "Café increíble y pastelería fresca. El ambiente es súper acogedor."
+        },
+        {
+          "author": "Diego R.",
+          "rating": 5,
+          "date": "Hace 1 mes",
+          "text": "Atención excelente y el cappuccino es de los mejores que probé."
+        },
+        {
+          "author": "María G.",
+          "rating": 4,
+          "date": "Hace 3 meses",
+          "text": "Muy lindo lugar, ideal para trabajar. Volvería sin dudar."
+        }
+      ],
+      "googleMapsUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.94155063245!2d-57.565884324509845!3d-25.272551577662448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da6051550917f%3A0x3c945ff3356ff799!2sAlmarreina!5e0!3m2!1ses-419!2spy!4v1768091458337!5m2!1ses-419!2spy"
+    }
+  },
+  "seo": {
+    "title": "Café de especialidad en Asunción | Almarreina",
+    "keywords": ["café de especialidad", "pastelería artesanal", "Asunción"],
+    "ogImage": "og.jpg"
+  }
+}
