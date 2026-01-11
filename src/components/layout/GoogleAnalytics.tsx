@@ -2,22 +2,26 @@
 
 import Script from "next/script";
 
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
 export default function GoogleAnalytics() {
-  const id = process.env.NEXT_PUBLIC_GA_ID; // TODO: completar con variable de entorno
-  if (!id) return null;
+  if (!GA_ID) return null;
 
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"
       />
-      <Script id="ga4" strategy="afterInteractive">
+      <Script id="ga-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${id}', { anonymize_ip: true });
+          gtag('config', '${GA_ID}', {
+            anonymize_ip: true,
+            page_path: window.location.pathname,
+          });
         `}
       </Script>
     </>

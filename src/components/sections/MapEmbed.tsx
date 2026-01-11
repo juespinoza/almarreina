@@ -1,3 +1,5 @@
+import { trackEvent } from "@/lib/analytics";
+
 export default function MapEmbed({ embedUrl }: { embedUrl: string }) {
   if (!embedUrl) return null;
 
@@ -7,6 +9,15 @@ export default function MapEmbed({ embedUrl }: { embedUrl: string }) {
       aria-label="Mapa"
     >
       <div className="relative w-full h-105 md:h-130 bg-bg">
+        <div
+          onClick={() =>
+            trackEvent("map_interaction", {
+              action: "iframe_click",
+            })
+          }
+          className="absolute inset-0 z-10"
+          aria-hidden
+        />
         <iframe
           src={embedUrl}
           className="absolute inset-0 h-full w-full"

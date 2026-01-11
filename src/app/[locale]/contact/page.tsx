@@ -5,6 +5,8 @@ import { buildMetadata, buildPageTitle } from "@/lib/seo";
 import ContactForm from "@/components/sections/ContactForm";
 import MapEmbed from "@/components/sections/MapEmbed";
 import Reviews from "@/components/sections/Reviews";
+import Link from "next/link";
+import { trackEvent } from "@/lib/analytics";
 
 export const revalidate = 3600; // 1 hora
 
@@ -74,22 +76,34 @@ export default async function ContactPage({
             <div className="text-sm text-muted">Síguenos</div>
             <div className="mt-3 flex gap-3">
               {data.site?.social?.facebook && (
-                <a
+                <Link
                   className="rounded-full border border-border bg-bg px-3 py-2 text-sm hover:bg-primary2/20 transition"
                   href={data.site.social.facebook}
                   target="_blank"
+                  onClick={() =>
+                    trackEvent("social_click", {
+                      network: "facebook",
+                      location: "contact",
+                    })
+                  }
                 >
                   Facebook
-                </a>
+                </Link>
               )}
               {data.site?.social?.instagram && (
-                <a
+                <Link
                   className="rounded-full border border-border bg-bg px-3 py-2 text-sm hover:bg-primary2/20 transition"
                   href={data.site.social.instagram}
                   target="_blank"
+                  onClick={() =>
+                    trackEvent("social_click", {
+                      network: "instagram",
+                      location: "contact",
+                    })
+                  }
                 >
                   Instagram
-                </a>
+                </Link>
               )}
             </div>
           </div>

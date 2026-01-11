@@ -1,3 +1,4 @@
+import { trackEvent } from "@/lib/analytics";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -32,15 +33,21 @@ export default function Footer({
 
             <div className="mt-5 flex items-center gap-3">
               {social.facebook && (
-                <a
+                <Link
                   href={social.facebook}
                   target="_blank"
                   className="h-9 w-9 grid place-items-center rounded-full bg-white/10 border border-white/15
                              hover:bg-white/15 transition"
                   aria-label="Facebook"
+                  onClick={() =>
+                    trackEvent("social_click", {
+                      network: "facebook",
+                      location: "footer",
+                    })
+                  }
                 >
                   f
-                </a>
+                </Link>
               )}
               {social.instagram && (
                 <a
@@ -49,6 +56,12 @@ export default function Footer({
                   className="h-9 w-9 grid place-items-center rounded-full bg-white/10 border border-white/15
                              hover:bg-white/15 transition"
                   aria-label="Instagram"
+                  onClick={() =>
+                    trackEvent("social_click", {
+                      network: "instagram",
+                      location: "footer",
+                    })
+                  }
                 >
                   ◎
                 </a>

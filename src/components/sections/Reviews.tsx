@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import type { ReviewsData } from "@/lib/types";
+import Link from "next/link";
+import { trackEvent } from "@/lib/analytics";
 
 function Stars({ value }: { value: number }) {
   const full = Math.max(0, Math.min(5, Math.round(value)));
@@ -83,13 +85,18 @@ export default function Reviews({ reviews }: { reviews?: ReviewsData }) {
 
       {reviews?.mapReviewsLink && (
         <div className="mt-6 text-center">
-          <a
+          <Link
             href={reviews.mapReviewsLink}
             target="_blank"
             className="inline-flex items-center justify-center rounded-lg border border-border bg-bg px-4 py-2 text-sm hover:bg-primary2/20 hover:-translate-y-px transition shadow-soft"
+            onClick={() =>
+              trackEvent("map_interaction", {
+                action: "open_google_maps",
+              })
+            }
           >
             Ver más en Google Maps
-          </a>
+          </Link>
         </div>
       )}
     </section>

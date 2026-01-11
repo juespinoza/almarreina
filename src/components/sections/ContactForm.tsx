@@ -1,5 +1,7 @@
 "use client";
 
+import { trackEvent } from "@/lib/analytics";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
 export default function ContactForm({ cafe, locale, formText, site }: any) {
@@ -42,6 +44,9 @@ export default function ContactForm({ cafe, locale, formText, site }: any) {
     } finally {
       setLoading(false);
     }
+    trackEvent("contact_click", {
+      method: "form",
+    });
   }
 
   return (
@@ -86,19 +91,29 @@ export default function ContactForm({ cafe, locale, formText, site }: any) {
           </button>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <a
+            <Link
               href={waHref}
               target="_blank"
               className="text-center rounded-lg border border-border bg-bg px-4 py-2 hover:bg-primary2/20 transition"
+              onClick={() =>
+                trackEvent("contact_click", {
+                  method: "whatsapp",
+                })
+              }
             >
               {formText.sendWhatsapp}
-            </a>
-            <a
+            </Link>
+            <Link
               href={mailHref}
               className="text-center rounded-lg border border-border bg-bg px-4 py-2 hover:bg-primary2/20 transition"
+              onClick={() =>
+                trackEvent("contact_click", {
+                  method: "email",
+                })
+              }
             >
               {formText.sendEmail}
-            </a>
+            </Link>
           </div>
 
           {ok === true && (

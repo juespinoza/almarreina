@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { cloudinaryUrl } from "@/lib/cloudinary";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Hero({
   cafe,
@@ -56,8 +57,14 @@ export default function Hero({
             <div className="mt-6 flex justify-center">
               <Link
                 href={hero.cta.href}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary2/90 px-6 py-3 text-sm font-semibold text-text
-                           hover:bg-primary2 hover:-translate-y-px transition shadow-soft"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary2/90 px-6 py-3 text-sm font-semibold text-text \
+                hover:bg-primary2 hover:-translate-y-px transition shadow-soft"
+                onClick={() =>
+                  trackEvent("cta_click", {
+                    location: "home",
+                    action: "explore_menu",
+                  })
+                }
               >
                 {hero.cta.label}
                 <span aria-hidden>→</span>
