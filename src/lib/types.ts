@@ -15,11 +15,13 @@ export type ReviewItem = {
 };
 
 export type ReviewsData = {
+  title?: string;
   sourceLabel?: string;
   rating?: number; // 0..5
   count?: number;
   items?: ReviewItem[];
   mapEmbedUrl?: string;
+  mapReviewsLink?: string;
 };
 
 export type Feature = {

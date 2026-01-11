@@ -133,8 +133,8 @@
     "reviews": {
       "title": "Avaliações dos Clientes",
       "sourceLabel": "Avaliações do Google",
-      "rating": 4.8,
-      "count": 327,
+      "rating": 4.3,
+      "count": 783,
       "items": [
         {
           "author": "Carolina V.",
@@ -155,7 +155,8 @@
           "text": "Lugar muito bonito, ideal para trabalhar. Voltaria com certeza."
         }
       ],
-      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.94155063245!2d-57.565884324509845!3d-25.272551577662448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da6051550917f%3A0x3c945ff3356ff799!2sAlmarreina!5e0!3m2!1spt!2spy!4v1768091458337!5m2!1spt!2spy"
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.94155063245!2d-57.565884324509845!3d-25.272551577662448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da6051550917f%3A0x3c945ff3356ff799!2sAlmarreina!5e0!3m2!1spt!2spy!4v1768091458337!5m2!1spt!2spy",
+      "mapReviewsLink": "https://www.google.com/maps/place/Almarreina/@-25.2725516,-57.5658843,17z/data=!4m8!3m7!1s0x945da6051550917f:0x3c945ff3356ff799!8m2!3d-25.2725516!4d-57.5633094!9m1!1b1!16s%2Fg%2F11gdtk5k3v?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D"
     }
   },
   "seo": {

@@ -8,11 +8,9 @@ import { Product } from "@/lib/types";
 import { formatGs, clampImages } from "@/lib/utils";
 
 export default function ProductsGrid({
-  cafe,
   folder,
   products,
 }: {
-  cafe: string;
   folder: string;
   products: Product[];
 }) {
@@ -48,7 +46,8 @@ export default function ProductsGrid({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.35 }}
-              className="rounded-xl2 border border-border bg-surface shadow-soft overflow-hidden"
+              className="rounded-sm border border-border bg-surface shadow-soft overflow-hidden \
+              hover:shadow-md hover:-translate-y-0.5 transition flex flex-col"
             >
               <div className="relative aspect-4/3 bg-bg">
                 {cover ? (

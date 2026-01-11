@@ -17,7 +17,7 @@ export default function MenuSections({
             {sec.items.map((item, i) => (
               <article
                 key={item.name + i}
-                className="rounded-xl2 border border-border bg-surface shadow-soft px-6 py-5
+                className="rounded-xl border border-border bg-surface shadow-soft px-6 py-5
                            hover:-translate-y-0.5 transition"
               >
                 <div className="flex items-start justify-between gap-4">

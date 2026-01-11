@@ -45,7 +45,7 @@ export default function ContactForm({ cafe, locale, formText, site }: any) {
   }
 
   return (
-    <div className="rounded-xl2 border border-border bg-surface shadow-soft p-6">
+    <div className="rounded-md border border-border bg-surface shadow-soft p-6">
       <h3 className="text-lg font-semibold">Envíanos un mensaje</h3>
 
       <div className="mt-4 space-y-3">

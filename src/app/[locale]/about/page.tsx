@@ -52,7 +52,7 @@ export default async function AboutPage({
         </div>
       </header>
 
-      <div className="mx-auto max-w-6xl px-4 py-12">
+      <div className="mx-auto max-w-6xl px-4 py-4">
         <Story
           cafe={cafe}
           folder={data.site.cloudinaryFolder}
@@ -68,7 +68,7 @@ export default async function AboutPage({
         </div>
 
         {data.aboutPage?.bannerImage && (
-          <div className="mt-14 rounded-xl2 border border-border shadow-soft overflow-hidden">
+          <div className="mt-14 rounded-sm border border-border shadow-soft overflow-hidden">
             <div className="relative h-65 md:h-90 bg-bg">
               <Image
                 src={cloudinaryUrl(

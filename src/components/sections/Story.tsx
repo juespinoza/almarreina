@@ -20,7 +20,7 @@ export default function Story({
   return (
     <section className="grid gap-8 md:grid-cols-2 items-center">
       {/* Imagen izquierda */}
-      <div className="relative aspect-16/10 rounded-xl2 overflow-hidden border border-border shadow-soft bg-bg">
+      <div className="relative aspect-16/10 rounded-md overflow-hidden border border-border shadow-soft bg-bg">
         <Image
           src={cloudinaryUrl(folder, story.image)}
           alt="Nuestra historia"

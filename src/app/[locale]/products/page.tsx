@@ -30,10 +30,7 @@ export async function generateMetadata({
     },
   };
 
-  return buildMetadata(
-    { locale: locale, slug: "products" },
-    dataWithSeo
-  );
+  return buildMetadata({ locale: locale, slug: "products" }, dataWithSeo);
 }
 
 export default async function ProductsPage({
@@ -53,9 +50,8 @@ export default async function ProductsPage({
         </div>
       </header>
 
-      <div className="mx-auto max-w-6xl px-4 py-12">
+      <div className="mx-auto max-w-6xl px-4 py-8">
         <ProductsGrid
-          cafe={cafe}
           folder={data.site.cloudinaryFolder}
           products={data.productsPage.products}
         />

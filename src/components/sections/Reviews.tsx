@@ -16,19 +16,15 @@ function Stars({ value }: { value: number }) {
   );
 }
 
-export default function Reviews({
-  reviews,
-  title,
-}: {
-  reviews?: ReviewsData;
-  title?: string;
-}) {
+export default function Reviews({ reviews }: { reviews?: ReviewsData }) {
   const items = reviews?.items ?? [];
 
   return (
-    <section className="py-10">
+    <section className="py-4">
       <div className="text-center">
-        <h2 className="text-3xl md:text-4xl">{title ?? "Customer Reviews"}</h2>
+        <h2 className="text-3xl md:text-4xl">
+          {reviews?.title ?? "Customer Reviews"}
+        </h2>
 
         {(reviews?.rating || reviews?.count) && (
           <div className="mt-3 flex items-center justify-center gap-3 text-sm text-muted">
@@ -85,14 +81,14 @@ export default function Reviews({
         </div>
       )}
 
-      {reviews?.mapEmbedUrl && (
+      {reviews?.mapReviewsLink && (
         <div className="mt-6 text-center">
           <a
-            href={reviews.mapEmbedUrl}
+            href={reviews.mapReviewsLink}
             target="_blank"
             className="inline-flex items-center justify-center rounded-lg border border-border bg-bg px-4 py-2 text-sm hover:bg-primary2/20 hover:-translate-y-px transition shadow-soft"
           >
-            Ver en Google Maps
+            Ver más en Google Maps
           </a>
         </div>
       )}

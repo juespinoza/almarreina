@@ -14,7 +14,7 @@ export default function Footer({
   const social = site?.social ?? {};
 
   return (
-    <footer className="mt-16 bg-primary text-white">
+    <footer className="mt-4 bg-primary text-white">
       <div className="mx-auto max-w-6xl px-4 py-12">
         <div className="grid gap-10 md:grid-cols-3">
           {/* Left: logo + tagline + social */}

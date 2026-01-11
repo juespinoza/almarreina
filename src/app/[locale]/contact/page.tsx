@@ -50,7 +50,7 @@ export default async function ContactPage({
         </div>
       </header>
 
-      <div className="mx-auto max-w-6xl px-4 py-12 grid gap-8 md:grid-cols-2">
+      <div className="mx-auto max-w-6xl px-4 py-8 grid gap-4 md:grid-cols-2">
         <ContactForm
           cafe={cafe}
           locale={locale}
@@ -59,18 +59,18 @@ export default async function ContactPage({
         />
 
         <div className="space-y-4">
-          <div className="rounded-xl2 border border-border bg-surface shadow-soft p-5">
+          <div className="rounded-md border border-border bg-surface shadow-soft p-5">
             <div className="text-sm text-muted">Visítanos</div>
             <div className="mt-1 font-medium">{data.site.address}</div>
           </div>
 
-          <div className="rounded-xl2 border border-border bg-surface shadow-soft p-5">
+          <div className="rounded-md border border-border bg-surface shadow-soft p-5">
             <div className="text-sm text-muted">Horario de Atención</div>
             <div className="mt-1">{data.site.hours.weekdays}</div>
             <div>{data.site.hours.weekends}</div>
           </div>
 
-          <div className="rounded-xl2 border border-border bg-surface shadow-soft p-5">
+          <div className="rounded-md border border-border bg-surface shadow-soft p-5">
             <div className="text-sm text-muted">Síguenos</div>
             <div className="mt-3 flex gap-3">
               {data.site?.social?.facebook && (
@@ -96,15 +96,12 @@ export default async function ContactPage({
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 pb-12">
+      <div className="mx-auto max-w-6xl px-4 pb-8">
         <MapEmbed embedUrl={data.contactPage.reviews.mapEmbedUrl} />
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 pb-16">
-        <Reviews
-          title={data.site.reviews?.title} // ✅ traducido desde JSON
-          reviews={data.site.reviews}
-        />
+      <div className="mx-auto max-w-6xl px-4 pb-8">
+        <Reviews reviews={data.contactPage.reviews} />
       </div>
     </div>
   );
