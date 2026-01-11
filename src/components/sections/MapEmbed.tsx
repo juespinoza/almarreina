@@ -1,4 +1,4 @@
-import { trackEvent } from "@/lib/analytics";
+import TrackBox from "../analytics/TrackBox";
 
 export default function MapEmbed({ embedUrl }: { embedUrl: string }) {
   if (!embedUrl) return null;
@@ -9,15 +9,14 @@ export default function MapEmbed({ embedUrl }: { embedUrl: string }) {
       aria-label="Mapa"
     >
       <div className="relative w-full h-105 md:h-130 bg-bg">
-        <div
-          onClick={() =>
-            trackEvent("map_interaction", {
-              action: "iframe_click",
-            })
-          }
+        <TrackBox
+          eventName="map_interaction"
+          eventParams={{ action: "iframe_click" }}
           className="absolute inset-0 z-10"
-          aria-hidden
-        />
+        >
+          {/* overlay transparente */}
+          <div className="absolute inset-0 z-10" aria-hidden />
+        </TrackBox>
         <iframe
           src={embedUrl}
           className="absolute inset-0 h-full w-full"

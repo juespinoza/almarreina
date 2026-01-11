@@ -1,5 +1,4 @@
-import { trackEvent } from "@/lib/analytics";
-import Link from "next/link";
+import TrackLink from "../analytics/TrackLink";
 
 export default function VisitBanner({
   cafe,
@@ -16,20 +15,16 @@ export default function VisitBanner({
       <p className="mt-2 text-sm text-muted">{visit.text}</p>
 
       <div className="mt-6 flex justify-center">
-        <Link
+        <TrackLink
           href={googleMapsUrl}
           target="_blank"
           className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-white text-sm font-semibold
                      hover:bg-primary/90 hover:translate-y-px transition shadow-soft"
-          onClick={() =>
-            trackEvent("cta_click", {
-              location: "home",
-              action: "how_to_arrive",
-            })
-          }
+          eventName="cta_click"
+          eventParams={{ location: "home", action: "how_to_arrive" }}
         >
           {visit.button}
-        </Link>
+        </TrackLink>
       </div>
     </section>
   );

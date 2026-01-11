@@ -1,8 +1,8 @@
 "use client";
 
-import { trackEvent } from "@/lib/analytics";
-import Link from "next/link";
 import { useMemo, useState } from "react";
+import TrackLink from "../analytics/TrackLink";
+import TrackButton from "../analytics/TrackButton";
 
 export default function ContactForm({ cafe, locale, formText, site }: any) {
   const [name, setName] = useState("");
@@ -44,9 +44,6 @@ export default function ContactForm({ cafe, locale, formText, site }: any) {
     } finally {
       setLoading(false);
     }
-    trackEvent("contact_click", {
-      method: "form",
-    });
   }
 
   return (
@@ -82,38 +79,34 @@ export default function ContactForm({ cafe, locale, formText, site }: any) {
         </div>
 
         <div className="flex flex-col gap-2">
-          <button
+          <TrackButton
             onClick={submit}
             disabled={loading}
             className="rounded-lg bg-primary px-4 py-2 text-white shadow-soft hover:translate-y-px transition disabled:opacity-60"
+            eventName="contact"
+            eventParams={{ method: "form" }}
           >
             {loading ? "Enviando..." : "Guardar y enviar"}
-          </button>
+          </TrackButton>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <Link
+            <TrackLink
               href={waHref}
               target="_blank"
               className="text-center rounded-lg border border-border bg-bg px-4 py-2 hover:bg-primary2/20 transition"
-              onClick={() =>
-                trackEvent("contact_click", {
-                  method: "whatsapp",
-                })
-              }
+              eventName="contact_click"
+              eventParams={{ method: "whatsapp" }}
             >
               {formText.sendWhatsapp}
-            </Link>
-            <Link
+            </TrackLink>
+            <TrackLink
               href={mailHref}
               className="text-center rounded-lg border border-border bg-bg px-4 py-2 hover:bg-primary2/20 transition"
-              onClick={() =>
-                trackEvent("contact_click", {
-                  method: "email",
-                })
-              }
+              eventName="contact_click"
+              eventParams={{ method: "email" }}
             >
               {formText.sendEmail}
-            </Link>
+            </TrackLink>
           </div>
 
           {ok === true && (
