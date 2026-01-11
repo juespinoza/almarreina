@@ -28,44 +28,46 @@ El proyecto está preparado para **contenido multilenguaje (ES / EN / PT)**, med
 - 🖼️ **Cloudinary** para imágenes optimizadas
 - 🚀 Performance-first (sin librerías pesadas innecesarias)
 
----
+--
 
 ## 🗂️ Estructura del proyecto
 
+````text
 src/
 ├── app/
-│ └── [locale]/
-│ ├── layout.tsx # Layout principal + SEO + Theme + GA
-│ ├── page.tsx # Home
-│ ├── menu/
-│ ├── products/
-│ ├── about/
-│ └── contact/
+│   └── [locale]/
+│       ├── layout.tsx        # Layout principal + SEO + Theme + GA
+│       ├── page.tsx          # Home
+│       ├── menu/
+│       ├── products/
+│       ├── about/
+│       └── contact/
 │
 ├── components/
-│ ├── layout/ # Header, Footer, GoogleAnalytics
-│ ├── sections/ # Hero, Features, Gallery, etc.
-│ ├── ui/ # MobileMenu, ThemeToggle, LocaleSwitch
-│ └── analytics/ # TrackButton, TrackLink, TrackBox
+│   ├── layout/               # Header, Footer, GoogleAnalytics
+│   ├── sections/             # Hero, Features, Gallery, etc.
+│   ├── ui/                   # MobileMenu, ThemeToggle, LocaleSwitch
+│   └── analytics/            # TrackButton, TrackLink, TrackBox
 │
 ├── lib/
-│ ├── analytics.ts # Helper GA4
-│ ├── content.ts # getCafeContent / getCafeTheme
-│ ├── seo.ts # buildMetadata / helpers SEO
-│ ├── i18n.ts # Locales y helpers
-│ └── utils.ts
+│   ├── analytics.ts          # Helper GA4
+│   ├── content.ts            # getCafeContent / getCafeTheme
+│   ├── seo.ts                # buildMetadata / helpers SEO
+│   ├── i18n.ts               # Locales y helpers
+│   └── utils.ts
 │
 ├── locale/
-│ ├── es.json
-│ ├── en.json
-│ └── pt.json
+│   ├── es.json
+│   ├── en.json
+│   └── pt.json
 │
 ├── styles/
-│ └── globals.css
+│   └── globals.css
 │
-└── middleware / proxy.ts # i18n routing
+└── middleware/
+    └── proxy.ts              # i18n routing
+```
 
----
 
 ## 🌍 Internacionalización (i18n)
 
@@ -79,7 +81,7 @@ src/
   - src/locale/pt.json
 - Los textos, títulos SEO y labels se traducen desde JSON.
 
----
+
 
 ## 📊 Google Analytics 4
 
@@ -87,6 +89,7 @@ El proyecto incluye medición avanzada de eventos:
 
 ### Eventos trackeados
 
+```text
 - CTA Home:
 - Explora Nuestro Menú
 - Cómo llegar
@@ -103,29 +106,27 @@ El proyecto incluye medición avanzada de eventos:
 - Footer:
 - Redes sociales
 - Link “Desarrollado por Julia Espinoza”
-
+```
 Los eventos se disparan **solo desde Client Components**, respetando App Router y evitando errores de build.
 
----
+
 
 ## 🛠️ Requisitos
 
 - Node.js **18+**
 - Yarn (recomendado)
 
----
+
 
 ## ▶️ Desarrollo local
 
 ```bash
 yarn install
 yarn dev
-```
+````
 
 Abrir:
 👉 http://localhost:3000/es
-
----
 
 ## 🏗️ Build de producción
 
@@ -133,8 +134,6 @@ Abrir:
 yarn build
 yarn start
 ```
-
----
 
 ## 🔐 Variables de entorno
 
@@ -145,23 +144,17 @@ NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=folderCode
 NEXT_PUBLIC_CAFE_NAME=cafeName
 ```
 
----
-
 ## 🚀 Deploy en Vercel (Recomendado)
 
     •	Build automático
     •	Soporte perfecto para App Router
     •	SEO y performance óptimos
 
----
-
 ## 👩‍💻 Desarrollo y diseño
 
 Desarrollado por:
 Julia Espinoza
 Ingeniera Informática · Web Performance · UX · SEO
-
----
 
 ## 📌 Estado del proyecto
 
@@ -170,8 +163,6 @@ Ingeniera Informática · Web Performance · UX · SEO
 ✔ Analytics integrado
 ✔ Performance optimizada
 🔜 Mejoras UX avanzadas (guardadas en roadmap)
-
----
 
 ## 🐝 Almarreina
 
