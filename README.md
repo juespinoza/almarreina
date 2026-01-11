@@ -32,7 +32,7 @@ El proyecto está preparado para **contenido multilenguaje (ES / EN / PT)**, med
 
 ## 🗂️ Estructura del proyecto
 
-````text
+```text
 src/
 ├── app/
 │   └── [locale]/
@@ -66,8 +66,8 @@ src/
 │
 └── middleware/
     └── proxy.ts              # i18n routing
-```
 
+```
 
 ## 🌍 Internacionalización (i18n)
 
@@ -81,15 +81,12 @@ src/
   - src/locale/pt.json
 - Los textos, títulos SEO y labels se traducen desde JSON.
 
-
-
 ## 📊 Google Analytics 4
 
 El proyecto incluye medición avanzada de eventos:
 
 ### Eventos trackeados
 
-```text
 - CTA Home:
 - Explora Nuestro Menú
 - Cómo llegar
@@ -106,24 +103,20 @@ El proyecto incluye medición avanzada de eventos:
 - Footer:
 - Redes sociales
 - Link “Desarrollado por Julia Espinoza”
-```
+
 Los eventos se disparan **solo desde Client Components**, respetando App Router y evitando errores de build.
-
-
 
 ## 🛠️ Requisitos
 
 - Node.js **18+**
 - Yarn (recomendado)
 
-
-
 ## ▶️ Desarrollo local
 
 ```bash
 yarn install
 yarn dev
-````
+```
 
 Abrir:
 👉 http://localhost:3000/es
